@@ -109,7 +109,7 @@ app.put('/UpdCustomer', (req, res) => {
     });
 });
 
-app.delete('/DelCusId', (req, res) => {
+app.delete('/DelCustId', (req, res) => {
     let id = req.body.id;
 
     Customer.findOneAndUpdate({ id: id }, { status: false }, { new: true, runValidators: true, context: 'query' }, (err, resp) => {
@@ -129,7 +129,7 @@ app.delete('/DelCusId', (req, res) => {
 
 });
 
-app.delete('/DelCusName', (req, res) => {
+app.delete('/DelCustName', (req, res) => {
     let firstName = req.body.firstName;
 
     Customer.findOneAndUpdate({ firstName: firstName }, { status: false }, { new: true, runValidators: true, context: 'query' }, (err, resp) => {

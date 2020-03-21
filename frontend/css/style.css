@@ -3,6 +3,7 @@
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     color: white;
+    font-weight: 900;
 }
 
 .navbar {
@@ -32,4 +33,25 @@ body {
 
 .nav-link {
     color: white !important;
+}
+
+.separadores {
+    background-color: rgb(233, 155, 10);
+    height: 4px;
+}
+
+#contenido {
+    color: white;
+    width: 300px;
+}
+
+table {
+    color: white;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
