@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>Actualizar cliente</title>
+    <title>Consultas</title>
 </head>
 
 <body>
@@ -49,64 +48,8 @@
         </div>
     </nav>
 
-    <div class="container">
-        <br><br>
-        <div class="row row-cols-2">
-            <div class="col">
-                <form enctype="multipart/form-data" class="form-actualizar">
-                    <p id="error" style="color: red; display: none;"></p>
-                    <p class="registrar">Inserte el ID a actualizar</p>
-                    <input name="id" type="text" class="form-control" placeholder="ID a eliminar" required><br>
-                    <p class="registrar">Inserte los campos que desea actualizar</p>
-                    <input name="firstName" type="text" class="form-control" placeholder="Nombre " required><br>
-                    <input name="lastName" type="text" class="form-control" placeholder="Apellidos" required><br>
-                    <input name="address" type="text" class="form-control" placeholder=" Direccion" required><br>
-                    <input name="city" type="text" class="form-control" placeholder="Ciudad" required><br>
-                    <input name="country" type="text" class="form-control" placeholder="Pais" required><br>
-                    <input name="district" type="text" class="form-control" placeholder=" Distrito" required><br>
-                    <button type="submit" class="btn btn-block btn-success ">Actualizar</button>
-                </form>
-                <!-- /////////////////SCRIPT PARA CONEXION Y ENVIO DE DATOS AL SERVIDOR///// -->
 
-                <script type="text/javascript" src="../scripts/UpdCustomer.js"></script>
-
-
-            </div>
-            <div class="col">
-                <form enctype="multipart/form-data" class="form-nombre">
-                    <p class="registrar">Consultar</p>
-
-                    <input name="user" type="text" class="form-control" placeholder="Nombre a consultar" required><br>
-                    <button type="submit" class="btn btn-block btn-dark">Consultar</button>
-
-                </form>
-                <br><br>
-
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellidos</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Pais</th>
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">Distrito</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="contenido">
-
-                    </tbody>
-                </table>
-
-            </div>
-            <script src="../scripts/ConCustomer.js" type="text/javascript">
-            </script>
-        </div>
-
-    </div>
-
+    <script src="" async defer></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>Actualizar cliente</title>
+    <title>Registro de Rentas</title>
 </head>
 
 <body>
@@ -41,8 +41,14 @@
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <a class="dropdown-item" href="./Rentas.html">Registrar </a>
+                        <a class="dropdown-item" href="./Rentas.html">Rentar propiedad </a>
                         <a class="dropdown-item" href="./ConRentas.html">Consultas </a>
+                        <a class="dropdown-item" href="./ConRentas.html">Consultas </a>
+
+
+                        <!-- <a class="dropdown-item" href="./ConRentas.html">Consultar </a>
+                        <a class="dropdown-item" href="./DeletCustomer.html">Eliminar</a> -->
+
                     </div>
                 </li>
             </ul>
@@ -51,61 +57,72 @@
 
     <div class="container">
         <br><br>
-        <div class="row row-cols-2">
+        <div class="row row-cols-3">
             <div class="col">
-                <form enctype="multipart/form-data" class="form-actualizar">
+                <form enctype="multipart/form-data" class="form">
                     <p id="error" style="color: red; display: none;"></p>
-                    <p class="registrar">Inserte el ID a actualizar</p>
-                    <input name="id" type="text" class="form-control" placeholder="ID a eliminar" required><br>
-                    <p class="registrar">Inserte los campos que desea actualizar</p>
-                    <input name="firstName" type="text" class="form-control" placeholder="Nombre " required><br>
-                    <input name="lastName" type="text" class="form-control" placeholder="Apellidos" required><br>
-                    <input name="address" type="text" class="form-control" placeholder=" Direccion" required><br>
-                    <input name="city" type="text" class="form-control" placeholder="Ciudad" required><br>
-                    <input name="country" type="text" class="form-control" placeholder="Pais" required><br>
-                    <input name="district" type="text" class="form-control" placeholder=" Distrito" required><br>
-                    <button type="submit" class="btn btn-block btn-success ">Actualizar</button>
+                    <p class="registrar">Registrar Renta </p>
+
+                    <input name="id_customer" type="text" class="form-control" placeholder="ID del cliente " required><br>
+                    <input name="id_propyte" type="text" class="form-control" placeholder="ID de la propiedad" required><br>
+
+                    <button type="submit" class="btn btn-block btn-success ">Registrar</button>
                 </form>
                 <!-- /////////////////SCRIPT PARA CONEXION Y ENVIO DE DATOS AL SERVIDOR///// -->
 
-                <script type="text/javascript" src="../scripts/UpdCustomer.js"></script>
+
 
 
             </div>
             <div class="col">
-                <form enctype="multipart/form-data" class="form-nombre">
-                    <p class="registrar">Consultar</p>
+                <form enctype="multipart/form-data" class="form-propiedad">
+                    <p class="registrar">Consultar propiedad </p>
 
-                    <input name="user" type="text" class="form-control" placeholder="Nombre a consultar" required><br>
+                    <input name="tipo_propiedad" type="text" class="form-control" placeholder="Tipo de propiedad a consultar" required><br>
+                    <input name="limite" type="text" class="form-control" placeholder="Limite de propiedades" required><br>
                     <button type="submit" class="btn btn-block btn-dark">Consultar</button>
+
 
                 </form>
                 <br><br>
 
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellidos</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Pais</th>
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">Distrito</th>
-                        </tr>
-                    </thead>
 
-                    <tbody id="contenido">
-
-                    </tbody>
-                </table>
-
+                <script src="../scripts/ConPropiedades.js" type="text/javascript">
+                </script>
             </div>
-            <script src="../scripts/ConCustomer.js" type="text/javascript">
-            </script>
+
         </div>
 
     </div>
+    <br><br>
+    <br>
+    <div class="container">
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Pais</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Calle</th>
+                    <th scope="col">Min_Noches</th>
+                    <th scope="col">Max_Noches</th>
+
+
+
+
+                </tr>
+            </thead>
+
+            <tbody id="contenido">
+
+            </tbody>
+        </table>
+    </div>
+
 
 </body>
 
